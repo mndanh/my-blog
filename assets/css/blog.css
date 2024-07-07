@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.entry h2 {
+    margin-top: 0;
+}
+
+.entry span {
+    display: block;
+    margin-top: 10px;
+    color: gray;
+}

@@ -1,23 +1,21 @@
-const blogForm = document.querySelector("form");
-const themeSwitcher = document.querySelector("#theme-switcher")
+document.addEventListener('DOMContentLoaded', function() {
+    const entries = getBlogEntries();
+    const entriesContainer = document.getElementById('entries');
+    entries.forEach(entry => {
+        const entryElement = document.createElement('div');
+        entryElement.classList.add('entry');
+        entryElement.innerHTML = `
+            <h2>${entry.title}</h2>
+            <p>${entry.content}</p>
+            <span>By ${entry.username} on ${entry.date}</span>
+        `;
+        entriesContainer.appendChild(entryElement);
+    });
 
-let screenMode = "dark";
+    const toggleButton = document.getElementById('toggle-theme');
+    toggleButton.addEventListener('click', toggleTheme);
+});
 
-if( themeSwitcher ){
-    themeSwitcher.addEventListener("click", function(){
-        // see what value of screen mode is and toggle it
-
-        screenMode = (screenMode === "dark") ? "light" : "dark";
-        document.querySelector("body").classList.replace(screenMode)
-    })
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
 }
-
-if(blogForm){
-blogForm.addEventListener("submit", function(event){
-    event.preventDefault();
-
-    window.location.href = `./article.html`
-    })
-}
-
-// mini project is helpful. take time and write down a lot of these steps and see what happens
