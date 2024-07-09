@@ -5,56 +5,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+
     <title>My First Blog</title>
 
-    <link rel="resetsheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="formsheet" href="./assets/css/form.css" />
-
-    <!-- <style>
-        body.light {
-            background-color: white;
-        }
-
-        body.dark {
-            background-color: black;
-        }
-
-        form {
-            border: 1px solid transparent;
-        }
-
-        body.light form {
-            border-color: black;
-        }
-
-        body.dark form {
-            border-color: white;;
-        }
-    </style> -->
   </head>
 
   <body>
-
+    <header></header>
     <div class="container">
         <div class="left-side">
             <h1>My First Blog</h1>
         </div>
         <div class="right-side">
             <form id="blog-form">
-                <h2>What's on your mind?</h2>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br>
+                <input type="text" id="username" name="username" required>
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required><br>
+                <input type="text" id="title" name="title" required>
                 <label for="content">Content:</label>
-                <textarea id="content" name="content" required></textarea><br>
+                <textarea id="content" name="content" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
 
-    <script type=text.javascript src="./assets/js/form.js"></script>
-    <script type=text.javascript src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>

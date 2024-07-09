@@ -1,21 +1,47 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+#back-button {
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+#toggle-mode {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+}
+
+#blog-entries {
+    display: block;
+    justify-content: flex-start;
+
+    padding: 20px;
+    border: 1px solid black;
 }
 
 .entry {
-    margin-bottom: 20px;
+    border: 1px solid black;
     padding: 10px;
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 .entry h2 {
-    margin-top: 0;
+    font-weight: bold;
+    text-decoration: underline;
+    width: 100%;
 }
 
-.entry span {
-    display: block;
+.entry p {
+    text-indent: 20px;
+    font-style: italic;
+}
+
+.entry .posted-by {
+    text-indent: 0;
+    font-style: normal;
+    font-weight: bold;
     margin-top: 10px;
-    color: gray;
 }

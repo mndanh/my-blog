@@ -1,21 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const entries = getBlogEntries();
-    const entriesContainer = document.getElementById('entries');
-    entries.forEach(entry => {
+    const blogEntriesContainer = document.getElementById('blog-entries');
+    const blogEntries = JSON.parse(localStorage.getItem('blogEntries')) || [];
+
+    blogEntries.forEach(entry => {
         const entryElement = document.createElement('div');
         entryElement.classList.add('entry');
         entryElement.innerHTML = `
             <h2>${entry.title}</h2>
-            <p>${entry.content}</p>
-            <span>By ${entry.username} on ${entry.date}</span>
+            <h3>by ${entry.username}</h3>
+            <p class="posted-by">Posted by: ${entry.username}</p>
         `;
-        entriesContainer.appendChild(entryElement);
+        blogEntriesContainer.appendChild(entryElement);
     });
-
-    const toggleButton = document.getElementById('toggle-theme');
-    toggleButton.addEventListener('click', toggleTheme);
 });
 
-function toggleTheme() {
+document.getElementById('toggle-mode').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
-}
+});
+
+document.getElementById('back-button').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
