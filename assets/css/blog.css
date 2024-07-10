@@ -1,11 +1,44 @@
 
 #back-button {
     top: 10px;
+    /* width: 40px; */
     left: 10px;
     padding: 10px;
     font-weight: bold;
     color: white;
     background-color: black;
+}
+
+.header {
+    display: inline-flex;
+    justify-items: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.arrow-left {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid white;
+    margin-right: 8px;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+.button-container img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button-container {
+    padding: 20px;
+    display: inline-flex;
 }
 
 #toggle-mode {
@@ -17,31 +50,64 @@
 #blog-entries {
     display: block;
     justify-content: flex-start;
-
     padding: 20px;
-    border: 1px solid black;
+
 }
 
 .entry {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     margin-bottom: 20px;
 }
 
 .entry h2 {
     font-weight: bold;
-    text-decoration: underline;
+    border-bottom: 1px solid black;
     width: 100%;
 }
 
-.entry p {
-    text-indent: 20px;
+.entry h3 {
     font-style: italic;
+    text-indent: 20px;
 }
 
 .entry .posted-by {
-    text-indent: 0;
-    font-style: normal;
+    margin-bottom: 3px;
+}
+
+footer {
+    border-top: 8px solid black;
+    border-top-style: double;
+    border-bottom: 8px solid black;
+    margin-bottom: 0;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+footer p {
+    display: flex;
+    align-items: column;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 10px;
+    font-family: serif;
+}
+
+h3 {
+    font-size: 12px;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 12px;
+    font-family: sans-serif;
 }

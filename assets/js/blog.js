@@ -7,17 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         entryElement.classList.add('entry');
         entryElement.innerHTML = `
             <h2>${entry.title}</h2>
-            <h3>by ${entry.username}</h3>
+            <h3>${entry.content}</h3>
             <p class="posted-by">Posted by: ${entry.username}</p>
         `;
         blogEntriesContainer.appendChild(entryElement);
     });
 });
 
-document.getElementById('toggle-mode').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-});
-
 document.getElementById('back-button').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
+
